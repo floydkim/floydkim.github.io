@@ -25,7 +25,9 @@ p {
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Nanum Gothic', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 800;
+  padding-top: 20px;
 }
+
 a {
   color: {{ site.link-col }};
 }
