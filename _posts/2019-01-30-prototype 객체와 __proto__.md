@@ -39,8 +39,8 @@ prototype을 이해하기 위해 MDN의 `Object.prototype`, `Object.prototype.__
 
 
 (이어서 \_\_proto\_\_에 대해 알아보겠습니다.)
-# Object.prototype.__proto__
-[MDN : Object.prototype.__proto__](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
+# Object.prototype.\_\_proto\_\_
+[MDN : Object.prototype.\_\_proto\_\_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 
 
 `Object.prototype`의 `__proto__` 속성은 accessor 속성(getter와 setter 함수)입니다.
