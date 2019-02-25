@@ -8,6 +8,8 @@ const value = "red";
 <div className={value}>hello world</div>;
 // <div> ~ </div> 모두를 div 컴포넌트라고 부릅니다.
 ```
+div 컴포넌트의 attribute들이 **props** 오브젝트의 속성으로 등록됩니다.  
+(attribute 이름을 key : 각각의 값을 value로 하는 key:value pair들이 props 오브젝트의 속성으로 등록되는 것 입니다.)
 
 <hr />
 아래는 [React.js 공식문서](https://reactjs.org/docs/components-and-props.html)의 번역입니다.
