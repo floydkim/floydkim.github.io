@@ -152,7 +152,7 @@ class Clock extends React.Component {
 ```
 이 메서드들은 "lifecycle methods"라고 부릅니다.
 
-`componentDidMout()` 메서드는 DOM에 컴포넌트 출력이 렌더된 후에 실행됩니다. 타이머 셋업을 위치시키기에 좋은 장소입니다.
+`componentDidMount()` 메서드는 DOM에 컴포넌트 출력이 렌더된 후에 실행됩니다. 타이머 셋업을 위치시키기에 좋은 장소입니다.
 
 ```react
   componentDidMount() {
@@ -231,6 +231,36 @@ ReactDOM.render(
 4. 매 초 마다 브라우저가 `tick()` 메서드를 호출합니다. 그 안에서, `Clock` 컴포넌트는 현재 시간을 담은 오브젝트를 가진 `setState()`를 호출함으로써 UI 업데이트를 스케쥴합니다. `setState()` 호출 덕분에, 리액트가 state가 변경된 것을 알게 됩니다. 그리고 스크린에 어떤 것이 떠야 하는지 알기 위해 `render()` 메서드를 다시 호출합니다. 이번에는, `render()` 메서드 안의 `this.state.date`가 다를 것이고, 따라서 렌더 출력은 업데이트된 시간을 포함할 것입니다. 리액트는 그에 따라 DOM을 업데이트합니다.
 
 5. `Clock` 컴포넌트가 DOM에서 제거된다면, 리액트는 `componentWillUnmount()` 라이프사이클 메서드를 호출하고, 타이머가 멈추게 됩니다.
+
+<hr />
+
+아래 내용은 [이 글](https://blog.bitsrc.io/understanding-react-v16-4-new-component-lifecycle-methods-fa7b224efd7d) 중 업데이트와 관련된 부분만 발췌해 번역했습니다.
+
+...
+
+### 2) Updating
+
+이 페이즈는 리액트 컴포넌트가 브라우저에 태어난 이후 새 업데이트를 받아 성장할 때 시작됩니다. 컴포넌트는 두 가지 방법으로 업데이트될 수 있습니다. **하나는 부모로부터 새 props를 전달받아서, 또 하나는 현재 state를 업데이트해서 이루어집니다.**
+
+위 두 방법 어느것이든 업데이트가 일어날 때, 메서드의 리스트는 다음과 같은 순서로 호출됩니다. :
+
+- **static getDerivedStateFromProps**  
+  글 위쪽에 Mounting 페이즈에서와 정확히 동일하게 동작합니다.
+
+  (윗부분 발췌: *props로부터 파생된 state를 가져온다*는 이름에서 알 수 있듯이, state가 props에 의존적일때 사용됩니다. 그러므로 props가 변경될 때 마다 state가 계속해서 동기화 되어야 합니다.
+  
+  이 메서드는 `constructor`가 호출된 후에 실행되며 컴포넌트의 state를 업데이트 하기 위한 오브젝트를 리턴해야 합니다. 만약 null이 리턴되면 state에는 어떤 변화도 일어나지 않습니다.
+  
+  `getDerivedStateFromProps` 메서드는 static합니다. 따라서 `this`에 대한 접근이 없습니다. 이 메서드는 현재 state와 props에 대한 접근만 가집니다. 따라서, 만약 state가 props에 의존적이라면 state가 여기에서 업데이트될 수 있습니다. 이 메서드는 리액트 v16.3+에서 새로 추가되었습니다. 사용 예: state가 새로 들어오는 props와 계속 동기화 되도록 유지합니다. 이 메서드는 `componentWillReceiveProps`메서드의 더 안전한 대체 수단입니다. 이 메서드는 순수함수(pure function)이고, 따라서 어떤 부수효과(side effect)도 발생시켜서는 안됩니다.)
+
+- **shouldComponentUpdate**  
+
+- **render**
+
+- **getSnapshotBeforeUpdate**
+
+- **componentDidUpdate**
+
 
 <hr />
 
