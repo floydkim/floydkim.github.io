@@ -11,6 +11,8 @@ const value = "red";
 div 컴포넌트의 attribute들이 **props** 오브젝트의 속성으로 등록됩니다.  
 (attribute 이름을 key : 각각의 값을 value로 하는 key:value pair들이 props 오브젝트의 속성으로 등록되는 것 입니다.)
 
+(참고: props에는 기본적으로 .children 속성이 포함돼있습니다. 컴포넌트의 child들을 담고있습니다.)
+
 <hr />
 아래는 [React.js 공식문서](https://reactjs.org/docs/components-and-props.html)의 번역입니다.
 <hr />
