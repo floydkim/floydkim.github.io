@@ -266,4 +266,27 @@ ReactDOM.render(
 
 [리액트 라이프사이클 다이어그램](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
 
+
+#### **mounting**
+1. `constructor` 호출
+2. `getDerivedStateFromProps` 호출
+3. `render` 호출
+4. DOM 업데이트
+5. `componentDidMount` 호출
+
+#### **updating**
+1. 새 `props`를 받거나, `setState()` 호출되었거나, `forceUpdate()` 호출되면
+2. `getDerivedStateFromProps` 호출
+3. forceUpdate()로 시작된게 아니라면, `shouldComponentUpdate` 호출됨. true 리턴된 경우 다음으로.
+4. `render` 호출
+5. `getSnapshotBeforeUpdate` 호출 (현상태 저장)
+6. DOM 업데이트
+7. `componentDidUpdate` 호출
+
+#### **unmounting**
+1. `componentWillUnmount` 호출
+
+<hr />
+
+
 최근에는 hook 이라는 것이 나왔다고 합니다. [벨로퍼트님 블로그 관련 글](https://velog.io/@velopert/react-hooks)
