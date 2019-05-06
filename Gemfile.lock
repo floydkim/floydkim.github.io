@@ -251,6 +251,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages (= 193)
   jekyll-paginate
+  jekyll-sitemap
   tzinfo-data
 
 BUNDLED WITH
