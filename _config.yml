@@ -124,7 +124,7 @@ gtag: "UA-135509771-1"
 # --- Comments --- #
 
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
-# disqus: ""
+disqus: "plastic-code"
 
 # To use Facebook Comments, fill in a Facebook App ID
 # fb_comment_id: ""
