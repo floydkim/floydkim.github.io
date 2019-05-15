@@ -23,6 +23,7 @@ description: floydkim
 
 # List of links in the navigation bar
 navbar-links:
+  TIL: "https://github.com/floydkim/TIL-codestates-IM11/tree/master/TIL"
 #  About Me: "aboutme"
 #  Resources:
 #    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
@@ -72,7 +73,7 @@ author:
 # If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
 social-network-links:
   rss: true
-  email: "r2d2em@empal.com"
+  email: "min.chang.kimm@gmail.com"
 #  facebook: daattali
   github: floydkim
 #  twitter: daattali
