@@ -122,8 +122,9 @@ img {
 
 .navbar-custom .nav li a {
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 16px;
   letter-spacing: 1px;
+  margin-right: 20px;
 }
 
 .navbar-custom .navbar-brand,
